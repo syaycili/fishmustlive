@@ -1,0 +1,38 @@
+.main{
+    margin: 0% 10% 0% 10%;
+    margin-top: 30px;
+    background-color: rgba(136, 255, 0, 0);
+}
+.post{
+margin-bottom: 40px;
+
+}
+.post_card{
+    border: 5px rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.336);
+    overflow: hidden;
+}
+
+.btn-grad {background-image: linear-gradient(to right, #3d7ca7 0%, #3a2d6d  51%, #174768  100%)}
+.btn-grad {
+   float: right;
+   text-decoration: none;
+   max-width: 100px;
+   margin: 10px 0px 10px 0px;
+   padding: 10px 10px;
+   text-align: center;
+   transition: 0.2s;
+   background-size: 200% auto;
+   color: white;
+   box-shadow: 0 0 20px #eee;
+   border-radius: 10px;
+   display: block;
+   cursor: pointer;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }

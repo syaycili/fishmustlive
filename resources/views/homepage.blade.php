@@ -15,6 +15,24 @@ body{
     box-shadow: 0 20px 40px 0 rgba(0,0,0,.2);
 }
 
+@media only screen and (max-width: 992px) {
+    .resimbolumu
+    {
+        display: none;
+    }
+}
+
+
+.girisresim{
+    height: 330px;
+    width: 90%;
+    border-radius: 20px;
+    object-fit: cover;
+    float: right;
+}
+.text-muted{
+    color: #19515c !important;
+}
 </style>
 <body>
 
@@ -24,26 +42,177 @@ body{
 
 
 
-    <div class="px-4 mt-5 text-center">
-      <h1 class="display-4 fw-bold">Fish Must Live!</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-3 p-3">
-        The World's Waters, Humankind, Organisms and More...! The Whole Chain <br>
-        Let everything to be connected. Do not let "Plastic Pollution" break the chain! <br>
-        Come and Share a New Post, Be a Plastic Detector, Prevent Plastic Pollution in Marine Areas!
-        </p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-          <a href="{{route('dashboard')}}" type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Locate New</a>
-          <a href="{{route('dashboard')}}" type="button" class="btn btn-outline-secondary btn-lg px-4">Dashboard</a>
+
+
+
+
+    <div class="container col-xxl-8 px-4 py-4">
+        <div class="row flex-lg-row align-items-center g-5 py-3">
+
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Fish Must Live!</h1>
+            <p class="lead py-1">The World's Waters, Humankind, Organisms and More...! The Whole Chain <br>
+                Let everything to be connected. Do not let "Plastic Pollution" break the chain! <br>
+                Come and Share a New Post, Be a Plastic Detector, Prevent Plastic Pollution in Marine Areas!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="{{route('dashboard')}}" type="button" class="btn btn-primary btn-lg px-4 me-md-2">Locate New</a>
+                <a href="https://forms.gle/LemmFDPRq2ncYkzz8" type="button" target="_blank" class="btn btn-outline-secondary btn-lg px-4">Join clean up event!</a>
+            </div>
+          </div>
+          <div class="resimbolumu col-10 col-sm-8 col-lg-6">
+            <img src="{{ asset('pictures/pollution1.jpg') }}" class="d-block mx-lg-auto img-fluid girisresim shadow"loading="lazy">
+          </div>
         </div>
       </div>
-      <div class="overflow-hidden" style="max-height: 30vh;">
-      </div>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.timeline-steps .timeline-step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1rem
+}
+
+@media (min-width:768px) {
+    .timeline-steps .timeline-step:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #19515c;
+        width: 3.46rem;
+        position: absolute;
+        left: 7.5rem;
+        top: .3125rem
+    }
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem dotted #19515c;
+        width: 3.8125rem;
+        position: absolute;
+        right: 7.5rem;
+        top: .3125rem
+    }
+}
+
+.timeline-steps .timeline-content {
+    width: 10rem;
+    text-align: center
+}
+
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #19515c
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+    content: "";
+    background-color: #34a6bd;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 6.25rem;
+    opacity: .5
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+      <div class="container py-5">
+
+
+        <div class="row">
+            <div class="col">
+                <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
+                    <div class="timeline-step">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
+                            <div class="inner-circle"></div>
+                            <p class="h6 mt-3 mb-1">February 2022</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Start</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
+                            <div class="inner-circle"></div>
+                            <p class="h6 mt-3 mb-1">March 2022</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Getting locations from users</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
+                            <div class="inner-circle"></div>
+                            <p class="h6 mt-3 mb-1">April 2022</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Planing clean up event</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
+                            <div class="inner-circle"></div>
+                            <p class="h6 mt-3 mb-1">May 2022</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Clean up event!</p>
+                        </div>
+                    </div>
+                    <div class="timeline-step mb-0">
+                        <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
+                            <div class="inner-circle"></div>
+                            <p class="h6 mt-3 mb-1">2022 - <span>&#8734;</span></p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Repeat until plastic pollution ends :)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
-    @include('components.map1')
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @include('components.map1',$posts)
 
     <style>
 .b-example-divider {
@@ -143,6 +312,8 @@ body{
 
 
 </div>
+
+
 
 @include('components.footer')
 </body>

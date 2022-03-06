@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Posts;
 use App\Models\User;
 
@@ -31,6 +32,45 @@ class adminislem extends Controller
     }
 
   }
+
+
+
+    public function iletisim_talepleri(){
+    if($this->adminkontrol() == 1){
+
+        $talepler= Contact::orderBy('id', 'ASC')->paginate(10);;
+        return view('admin.contacts',array('talepler'=>$talepler));
+
+    }else{
+        return redirect()->route('homepage');
+    }
+    }
+
+
+
+    public function iletisim_talep_sil(int $id){
+
+        if($this->adminkontrol() == 1){
+            Contact::where('id', $id)->delete();
+            return back();
+        }else{
+            return redirect()->route('homepage');
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

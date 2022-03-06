@@ -16,15 +16,13 @@ style: 'mapbox://styles/mapbox/streets-v11',
 center: [28.744027166536,41.00650088742137],
 zoom: 9
 });
-
-const marker1 = new mapboxgl.Marker({ color: 'black', rotation: 0 })
-.setLngLat([28.5506,41.0689])
-.addTo(map);
-const marker2 = new mapboxgl.Marker({ color: 'black', rotation: 0 })
-.setLngLat([28.7490,41.0152])
-.addTo(map);
-const marker3 = new mapboxgl.Marker({ color: 'black', rotation: 0 })
-.setLngLat([28.7382,41.1365])
-.addTo(map);
 </script>
 
+@foreach ($posts as $post)
+<script>
+    const {{"marker_".$post->id}} = new mapboxgl.Marker({ color: 'purple', rotation: 0 })
+    .setLngLat([{{$post->Location_Y}},{{$post->Location_X}}])
+    .addTo(map);
+</script>
+
+@endforeach

@@ -2,10 +2,23 @@
 <body>
 @include('components.navbar')
 
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+<script>
+mapboxgl.accessToken = "{{env('MAP_BOX_API_KEY')}}";
+</script>
+
+
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
+
+
 
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
+        <form action="{{ url('newpost') }}" enctype="multipart/form-data" method="POST">
+            {{ csrf_field() }}
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">New Post</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -28,8 +41,10 @@
             @include('components.postshare')
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-primary" type="submit">Share</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
         </div>
+        </form>
       </div>
     </div>
   </div>
@@ -52,13 +67,6 @@
               </div>
             </div>
           </div>
-
-
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-<script>
-mapboxgl.accessToken = "{{env('MAP_BOX_API_KEY')}}";
-</script>
 
 @foreach ($posts as $post)
 

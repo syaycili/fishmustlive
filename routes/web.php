@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\adminislem;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomepageKontrol;
+use App\Http\Controllers\PostDetay;
 use App\Http\Controllers\PostKontrol;
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +17,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('homepage');
-})->name('homepage');
+Route::get('/',[HomepageKontrol::class, 'homepage'])->name('homepage');
 
 Route::get('/logo', function () {
     return view('logo');
@@ -27,6 +27,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard',[PostKontrol::
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/admin',[adminislem::class, 'adminpaneli'])->name('paneladmin');
 Route::middleware(['auth:sanctum', 'verified'])->get('/admin/uyepaneli',[adminislem::class, 'uyeleriListele'])->name('üye_paneli');
+Route::middleware(['auth:sanctum', 'verified'])->get('/admin/contacts',[adminislem::class, 'iletisim_talepleri'])->name('iletisim_talepleri');
+Route::middleware(['auth:sanctum', 'verified'])->get('/admin/contacdelete/{id}',[adminislem::class,'iletisim_talep_sil'])->name('iletisim_talep_sil');
 Route::middleware(['auth:sanctum', 'verified'])->get('/admin/uyedelete/{id}',[adminislem::class,'uyeSil'])->name('uye_delete');
 
 Route::get('/api/allposts',[PostKontrol::class, 'AllPosts'])->name('allposts');
@@ -50,3 +52,9 @@ Route::get('/aboutproject', function () {
 Route::get('/contactus', function () {
     return view('contactus');
 })->name('contactus');
+
+
+Route::get('posts/{id}',[PostDetay::class, 'postdetay'])->name('postdetay');
+
+Route::post('contact-us', [ ContactController::class, 'saveContact' ])->name('contact-us');
+

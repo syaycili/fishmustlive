@@ -27,9 +27,12 @@
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a @if($suankisayfa == 1) href="#" class="nav-link active" aria-current="page" @else href="{{ route('paneladmin') }}"  class="nav-link"  @endif  style="margin-right: 15px;">Admin Paneli</a>
-                  </li>
+                </li>
                 <li class="nav-item">
-                  <a @if($suankisayfa == 3) href="#"  class="nav-link active" aria-current="page"  @else href="{{ route('üye_paneli') }}" class="nav-link" @endif  style="margin-right: 15px;">Üyeleri Yönet</a>
+                    <a @if($suankisayfa == 3) href="#"  class="nav-link active" aria-current="page"  @else href="{{ route('üye_paneli') }}" class="nav-link" @endif  style="margin-right: 15px;">Üyeleri Yönet</a>
+                </li>
+                <li class="nav-item">
+                    <a @if($suankisayfa == 4) href="#"  class="nav-link active" aria-current="page"  @else href="{{ route('iletisim_talepleri') }}" class="nav-link" @endif  style="margin-right: 15px;">İletişim Talepleri</a>
                 </li>
               </ul>
 

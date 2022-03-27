@@ -171,7 +171,7 @@ body{
                         <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
                             <div class="inner-circle"></div>
                             <p class="h6 mt-3 mb-1">April 2022</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0">Planing clean up event</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">Fill out the form to participate in the clean-up event!</p>
                         </div>
                     </div>
                     <div class="timeline-step">

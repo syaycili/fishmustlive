@@ -1,5 +1,12 @@
 <style>
-
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
 .navbar{
     background-color: rgba(245, 245, 245, 0.76);
     box-shadow: 0 6px 20px 0 rgba(0,0,0,.2);
@@ -50,13 +57,13 @@ color: #3e7aac !important;
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active pr-3" aria-current="page" href="{{ route('homepage') }}">Home</a>
+            <a class="nav-link active pr-3" aria-current="page" href="{{ route('homepage') }}">{{ __('content.navl1') }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active pr-3" aria-current="page" href="{{ route('aboutus') }}">About Us</a>
+            <a class="nav-link active pr-3" aria-current="page" href="{{ route('aboutus') }}">{{ __('content.navl2') }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active pr-3" aria-current="page" href="{{ route('contactus') }}">Contact Us</a>
+            <a class="nav-link active pr-3" aria-current="page" href="{{ route('contactus') }}">{{ __('content.navl3') }}</a>
           </li>
         </ul>
         <div class="d-flex">
@@ -73,14 +80,14 @@ color: #3e7aac !important;
                 {{ Auth::user()->name }}
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="{{ route('homepage') }}">Home</a></li>
-                    <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a></li>
-                    <li><a class="dropdown-item" href="{{ route('profile.show') }}">Profile</a></li>
+                    <li><a class="dropdown-item" href="{{ route('homepage') }}">{{ __('content.nava1') }}</a></li>
+                    <li><a class="dropdown-item" href="{{ route('dashboard') }}">{{ __('content.nava2') }}</a></li>
+                    <li><a class="dropdown-item" href="{{ route('profile.show') }}">{{ __('content.nava3') }}</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">Log Out</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">{{ __('content.nava4') }}</a>
                         </form>
                     </li>
                 </ul>
@@ -91,10 +98,11 @@ color: #3e7aac !important;
 
 
             @else
-            <a href="{{ route('login') }}" type="button" class="btn costumbtn button1 me-2">Login</a>
-            <a href="{{ route('register') }}" type="button" class="btn costumbtn">Register</a>
+            <a href="{{ route('login') }}" type="button" class="btn costumbtn button1 me-2">{{ __('content.navb1') }}</a>
+            <a href="{{ route('register') }}" type="button" class="btn costumbtn">{{ __('content.navb2') }}</a>
             @endauth
         </div>
       </div>
     </div>
   </nav>
+

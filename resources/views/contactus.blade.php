@@ -26,7 +26,7 @@
           <div class="col-md-12">
             <div class="card card-user">
               <div class="card-header">
-                <h2 class="h1-responsive font-weight-bold text-center my-2">Contact us</h2>
+                <h2 class="h1-responsive font-weight-bold text-center my-2">{{ __('content.ct1') }}</h2>
               </div>
              <div class="card-body mx-3">
                 @if(Session::has('success'))
@@ -40,8 +40,8 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label> Name </label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Name" name="name" required>
+                        <label> {{ __('content.ct2') }}* </label>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" placeholder="{{ __('content.ct2') }}" name="name" required>
                         @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -51,8 +51,8 @@
                     </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                        <label> Email </label>
-                        <input type="text" class="form-control @error('email') is-invalid @enderror" placeholder="Email" name="email" required>
+                        <label> {{ __('content.ct3') }}* </label>
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" placeholder="{{ __('content.ct3') }}" name="email" required>
                         @error('email')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -62,8 +62,8 @@
                     </div>
                   <div class="col-md-12">
                      <div class="form-group">
-                        <label> Phone Number </label>
-                        <input type="text" class="form-control @error('phone_number') is-invalid @enderror" placeholder="Phone Number" name="phone_number">
+                        <label> {{ __('content.ct4') }} </label>
+                        <input type="text" class="form-control @error('phone_number') is-invalid @enderror" placeholder="{{ __('content.ct4') }}" name="phone_number">
                         @error('phone_number')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -73,8 +73,8 @@
                     </div>
                    <div class="col-md-12">
                       <div class="form-group">
-                        <label> Subject </label>
-                        <input type="text" class="form-control @error('subject') is-invalid @enderror" placeholder="Subject" name="subject" required>
+                        <label> {{ __('content.ct5') }}* </label>
+                        <input type="text" class="form-control @error('subject') is-invalid @enderror" placeholder="{{ __('content.ct5') }}" name="subject" required>
                         @error('subject')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -84,8 +84,8 @@
                     </div>
                    <div class="col-md-12">
                      <div class="form-group">
-                        <label> Message </label>
-                        <textarea class="form-control textarea @error('message') is-invalid @enderror" placeholder="Message" name="message" required></textarea>
+                        <label> {{ __('content.ct6') }}* </label>
+                        <textarea class="form-control textarea @error('message') is-invalid @enderror" placeholder="{{ __('content.ct6') }}" name="message" required></textarea>
                         @error('message')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -96,7 +96,7 @@
                   </div>
                   <div class="row">
                    <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round">Send</button>
+                      <button type="submit" class="btn btn-primary btn-round">{{ __('content.ct7') }}</button>
                     </div>
                   </div>
                 </form>

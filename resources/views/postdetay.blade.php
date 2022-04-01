@@ -31,7 +31,7 @@ $img_path = substr($img_path, 7);
 
     <div class="row align-items-start">
         <div class="col">
-            <button style="width: 100px;" class="btn btn-primary" onclick="history.back()">Turn Back</button>
+            <button style="width: 100px;" class="btn btn-primary" onclick="history.back()">{{ __('content.pd1') }}</button>
         </div>
     </div>
 
@@ -44,7 +44,7 @@ $img_path = substr($img_path, 7);
         <div class="card-body">
           <h5 class="card-title">{{$post->PostBaslik}}</h1>
           <p class="card-text">{{$post->PostAciklama}}</p>
-          <p class="card-text"><b>Address:</b> {{$post->PostAdres}}</p>
+          <p class="card-text"><b>{{ __('content.pd2') }}: </b> {{$post->PostAdres}}</p>
 
 
             <div class="row mb-3 row-cols-1">
@@ -73,8 +73,8 @@ $img_path = substr($img_path, 7);
               </div>
 
               <div class="col">
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">Share</button>
-                <a href="{{route('contactus')}}" class="btn btn-danger float-end">Report</a>
+                <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">{{ __('content.pdb1') }}</button>
+                <a href="{{route('contactus')}}" class="btn btn-danger float-end">{{ __('content.pdb2') }}</a>
               </div>
 
             </div>
@@ -115,7 +115,7 @@ $img_path = substr($img_path, 7);
     <div class="modal-content">
       <div class="modal-header">
 
-        <h5 class="modal-title" id="exampleModalLabel">İlanı Paylaş</h5>
+        <h5 class="modal-title" id="exampleModalLabel">{{ __('content.sh1') }}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -134,7 +134,7 @@ $img_path = substr($img_path, 7);
             <i id="sosyalmedyaikonlari" class="fab fa-facebook"></i>
           </a>
 
-        <a target="_blank" href="https://twitter.com/intent/tweet?url=https://fishmust.live/posts/{{$post->id}}&text=MeetUptoTeamUp%20ile%20kurdu%C4%9Fum%20tak%C4%B1m%C4%B1ma%20kat%C4%B1l%C4%B1n!" type="button" class="btn btn-primary btn-lg btn-floating">
+        <a target="_blank" href="https://twitter.com/intent/tweet?url=https://fishmust.live/posts/{{$post->id}}" type="button" class="btn btn-primary btn-lg btn-floating">
             <i id="sosyalmedyaikonlari" class="fab fa-twitter"></i>
           </a>
 
@@ -142,7 +142,7 @@ $img_path = substr($img_path, 7);
             <i id="sosyalmedyaikonlari" class="fab fa-linkedin"></i>
           </a>
 
-          <a target="_blank" href="mailto:info@example.com?&subject=&cc=&bcc=&body=https://fishmust.live/posts/{{$post->id}}%0AMeetUptoTeamUp%20ile%20kurdu%C4%9Fum%20tak%C4%B1m%C4%B1ma%20kat%C4%B1l%C4%B1n!" type="button" class="btn btn-primary btn-lg btn-floating">
+          <a target="_blank" href="mailto:info@example.com?&subject=&cc=&bcc=&body=https://fishmust.live/posts/{{$post->id}}" type="button" class="btn btn-primary btn-lg btn-floating">
             <i id="sosyalmedyaikonlari" class="far fa-envelope"></i>
           </a>
         </div>
@@ -156,7 +156,7 @@ $img_path = substr($img_path, 7);
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-          Kapat
+            {{ __('content.sh2') }}
         </button>
 
       </div>

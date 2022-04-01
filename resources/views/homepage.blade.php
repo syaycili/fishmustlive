@@ -51,12 +51,13 @@ body{
 
           <div class="col-lg-6">
             <h1 class="display-5 fw-bold lh-1 mb-3">Fish Must Live!</h1>
-            <p class="lead py-1">The World's Waters, Humankind, Organisms and More...! The Whole Chain <br>
-                Let everything to be connected. Do not let "Plastic Pollution" break the chain! <br>
-                Come and Share a New Post, Be a Plastic Detector, Prevent Plastic Pollution in Marine Areas!</p>
+
+            <p class="lead py-1">{{ __('content.hph1') }}<br>
+                {{ __('content.hph2') }}<br>
+                {{ __('content.hph3') }}</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <a href="{{route('dashboard')}}" type="button" class="btn btn-primary btn-lg px-4 me-md-2">Locate New</a>
-                <a href="https://forms.gle/LemmFDPRq2ncYkzz8" type="button" target="_blank" class="btn btn-outline-secondary btn-lg px-4">Join clean up event!</a>
+                <a href="{{route('dashboard')}}" type="button" class="btn btn-primary btn-lg px-4 me-md-2">{{ __('content.hphb1') }}</a>
+                <a href="https://forms.gle/LemmFDPRq2ncYkzz8" type="button" target="_blank" class="btn btn-outline-secondary btn-lg px-4">{{ __('content.hphb2') }}</a>
             </div>
           </div>
           <div class="resimbolumu col-10 col-sm-8 col-lg-6">
@@ -156,61 +157,42 @@ body{
                     <div class="timeline-step">
                         <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
                             <div class="inner-circle"></div>
-                            <p class="h6 mt-3 mb-1">February 2022</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0">Start</p>
+                            <p class="h6 mt-3 mb-1">{{ __('content.hptld1') }}</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">{{ __('content.hptl1') }}</p>
                         </div>
                     </div>
                     <div class="timeline-step">
                         <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
                             <div class="inner-circle"></div>
-                            <p class="h6 mt-3 mb-1">March 2022</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0">Getting locations from users</p>
+                            <p class="h6 mt-3 mb-1">{{ __('content.hptld2') }}</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">{{ __('content.hptl2') }}</p>
                         </div>
                     </div>
                     <div class="timeline-step">
                         <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2005">
                             <div class="inner-circle"></div>
-                            <p class="h6 mt-3 mb-1">April 2022</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0">Fill out the form to participate in the clean-up event!</p>
+                            <p class="h6 mt-3 mb-1">{{ __('content.hptld3') }}</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">{{ __('content.hptl3') }}</p>
                         </div>
                     </div>
                     <div class="timeline-step">
                         <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2010">
                             <div class="inner-circle"></div>
-                            <p class="h6 mt-3 mb-1">May 2022</p>
-                            <p class="h6 text-muted mb-0 mb-lg-0">Clean up event!</p>
+                            <p class="h6 mt-3 mb-1">{{ __('content.hptld4') }}</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">{{ __('content.hptl4') }}</p>
                         </div>
                     </div>
                     <div class="timeline-step mb-0">
                         <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2020">
                             <div class="inner-circle"></div>
                             <p class="h6 mt-3 mb-1">2022 - <span>&#8734;</span></p>
-                            <p class="h6 text-muted mb-0 mb-lg-0">Repeat until plastic pollution ends :)</p>
+                            <p class="h6 text-muted mb-0 mb-lg-0">{{ __('content.hptl5') }}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     @include('components.map1',$posts)
 
@@ -284,7 +266,7 @@ body{
           <div class="col">
             <div onclick="window.open('{{ route('dashboard') }}');" style="cursor: pointer; border: rgb(255, 255, 255) 3px solid; background-image: url('{{ asset('pictures/step1.jpg') }}');" class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
               <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Create an account!</h2>
+                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ __('content.hpf1') }}</h2>
               </div>
             </div>
           </div>
@@ -292,7 +274,7 @@ body{
           <div class="col">
             <div onclick="window.open('{{ route('dashboard') }}');" style="cursor: pointer; border: rgb(255, 255, 255) 3px solid; background-image: url('{{ asset('pictures/step2.jpg') }}');" class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
               <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">See the plastic pollution that the community shared.</h2>
+                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ __('content.hpf2') }}</h2>
               </div>
             </div>
           </div>
@@ -300,7 +282,7 @@ body{
           <div class="col">
             <div onclick="window.open('{{ route('dashboard') }}');" style="cursor: pointer; border: rgb(255, 255, 255) 3px solid; background-image: url('{{ asset('pictures/step3.jpg') }}');" class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg">
               <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Share the plastic pollution around you!</h2>
+                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ __('content.hpf3') }}</h2>
               </div>
             </div>
           </div>
@@ -316,4 +298,5 @@ body{
 
 
 @include('components.footer')
+
 </body>

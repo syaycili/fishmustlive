@@ -58,3 +58,4 @@ Route::get('posts/{id}',[PostDetay::class, 'postdetay'])->name('postdetay');
 
 Route::post('contact-us', [ ContactController::class, 'saveContact' ])->name('contact-us');
 
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);

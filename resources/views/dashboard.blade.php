@@ -20,7 +20,7 @@ mapboxgl.accessToken = "{{env('MAP_BOX_API_KEY')}}";
         <form action="{{ url('newpost') }}" enctype="multipart/form-data" method="POST">
             {{ csrf_field() }}
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">New Post</h5>
+          <h5 class="modal-title" id="staticBackdropLabel">{{ __('content.ps1') }}</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -41,8 +41,8 @@ mapboxgl.accessToken = "{{env('MAP_BOX_API_KEY')}}";
             @include('components.postshare')
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" type="submit">Share</button>
-          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-primary" type="submit">{{ __('content.db1') }}</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">{{ __('content.db2') }}</button>
         </div>
         </form>
       </div>
@@ -57,12 +57,12 @@ mapboxgl.accessToken = "{{env('MAP_BOX_API_KEY')}}";
         <div class="mb-4 mt-1">
             <div class="row">
               <div class="col-8">
-                <h1 class="mb-2">Shared Locations</h1>
-                <p class="mb-3">These are the places with plastic pollution.</p>
+                <h1 class="mb-2">{{ __('content.db3') }}</h1>
+                <p class="mb-3">{{ __('content.db4') }}</p>
               </div>
               <div class="col-4 addnew_button">
                 <span class="btn-grad" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                Add New
+                {{ __('content.dbb1') }}
                 </span>
               </div>
             </div>

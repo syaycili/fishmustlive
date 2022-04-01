@@ -25,14 +25,14 @@ width: 100%;
 
 <div class="container">
     <div class="govde">
-        <h3 class="baslik">Locate New Plastic Polution</h3>
+        <h3 class="baslik">{{ __('content.ps2') }}</h3>
             <div class="form-outline mb-4">
-                <label class="form-label" for="PostBaslik">Title</label>
+                <label class="form-label" for="PostBaslik">{{ __('content.ps3') }}</label>
                 <input type="text" id="PostBaslik" class="form-control" name="PostBaslik" required/>
             </div>
 
             <div class="form-outline mb-4">
-                <label class="form-label" for="PostAciklama">Description</label>
+                <label class="form-label" for="PostAciklama">{{ __('content.ps4') }}</label>
                 <textarea id="PostAciklama" class="form-control" name="PostAciklama" required></textarea>
             </div>
 
@@ -42,14 +42,14 @@ width: 100%;
 
             <div class="form-outline mb-5">
                 <div class="mb-4">
-                    <label for="Image" class="form-label">Image Upload</label>
+                    <label for="Image" class="form-label">{{ __('content.ps5') }}</label>
                     <input class="form-control" type="file" name="image" id="formFile" placeholder="Choose image" onchange="preview()" required>
                 </div>
                 <img id="frame" onclick="document.getElementById('formFile').click();" src="{{ asset('pictures/placeholder.svg') }}" class="img_preview" />
             </div>
 
 
-            <label for="map" class="form-label">Select Location</label>
+            <label for="map" class="form-label">{{ __('content.ps6') }}</label>
             <div class="form-outline mb-4">
                 <div id="map"></div>
             </div>
@@ -71,7 +71,7 @@ const geocoder = new MapboxGeocoder({
 accessToken: mapboxgl.accessToken, // Set the access token
 mapboxgl: mapboxgl, // Set the mapbox-gl instance
 marker: false, // Do not use the default marker style
-placeholder: 'Location...', // Placeholder text for the search bar
+placeholder: "{{ __('content.ps7') }}...", // Placeholder text for the search bar
 zoom: 11,
 });
 

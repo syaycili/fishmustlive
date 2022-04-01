@@ -42,22 +42,22 @@ filter: FlipH;
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 text-left">
-          <h1>About Us</h1>
-          <p class="lead">As high school students we initiated a step toward a worldwide campaign to raise social awareness. With FishMust.live!, we aim to decontaminate marine water resources from plastic pollution and offer a suitable environment for underwater organisms with social interactions! </p>
+          <h1>{{ __('content.ab1') }}</h1>
+          <p class="lead">{{ __('content.ab2') }}</p>
         </div>
       </div>
 
       <div class="row text-left pt-4">
         <div class="col-12 col-sm-6 col-md-5">
 
-            <h3><img alt="image" class="fdb-icon" src="{{ asset('pictures/icons/balik.svg') }}"> <strong>Values</strong></h3>
-          <p>FishMust.live! contributes to the social awareness for sustainable and more diverse marine life by organizing clean-up events against environmental threats.</p>
+            <h3><img alt="image" class="fdb-icon" src="{{ asset('pictures/icons/balik.svg') }}"> <strong>{{ __('content.ab3') }}</strong></h3>
+          <p>{{ __('content.ab4') }}</p>
         </div>
 
         <div class="col-12 col-sm-6 col-md-5 ml-sm-auto pt-5 pt-sm-0">
 
-          <h3><img alt="image" class="fdb-icon" src="{{ asset('pictures/icons/yelkenli.svg') }}"> <strong>History</strong></h3>
-          <p>In 2022, the founders of FishMust.live! realized how the plastic pollution in marine areas is caused by negligence. What were their goals? Conserving biological diversity!</p>
+          <h3><img alt="image" class="fdb-icon" src="{{ asset('pictures/icons/yelkenli.svg') }}"> <strong>{{ __('content.ab5') }}</strong></h3>
+          <p>{{ __('content.ab6') }}</p>
         </div>
       </div>
     </div>
@@ -71,7 +71,7 @@ filter: FlipH;
     <div class="container py-5">
       <div class="row mb-4">
         <div class="col-lg-10">
-          <h2 class="display-4 font-weight-light">Our Team</h2>
+          <h2 class="display-4 font-weight-light">{{ __('content.ab7') }}</h2>
           <p class="font-italic text-muted"></p>
         </div>
       </div>
@@ -80,7 +80,7 @@ filter: FlipH;
         <!-- Team item-->
         <div class="col-xl-4 col-sm-6 mb-5">
           <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{{ asset('pictures/team/arel.jpg') }}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-            <h5 class="mb-0">Arel Baha Encin</h5><span class="small text-uppercase text-muted">Class-11 Student</span>
+            <h5 class="mb-0">Arel Baha Encin</h5><span class="small text-uppercase text-muted">{{ __('content.ab8') }}</span>
             <ul class="social mb-0 list-inline mt-3">
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
@@ -93,7 +93,7 @@ filter: FlipH;
         <!-- Team item-->
         <div class="col-xl-4 col-sm-6 mb-5">
           <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{{ asset('pictures/team/sarp.jpg') }}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-            <h5 class="mb-0">Sarp Yaycılı</h5><span class="small text-uppercase text-muted">Class-11 Student</span>
+            <h5 class="mb-0">Sarp Yaycılı</h5><span class="small text-uppercase text-muted">{{ __('content.ab8') }}</span>
             <ul class="social mb-0 list-inline mt-3">
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
@@ -106,7 +106,7 @@ filter: FlipH;
         <!-- Team item-->
         <div class="col-xl-4 col-sm-6 mb-5">
           <div class="bg-white rounded shadow-sm py-5 px-4"><img src="{{ asset('pictures/team/süleyman.jpg') }}" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-            <h5 class="mb-0">Süleyman Nur Tütüncü</h5><span class="small text-uppercase text-muted">Class-11 Student</span>
+            <h5 class="mb-0">Süleyman Nur Tütüncü</h5><span class="small text-uppercase text-muted">{{ __('content.ab8') }}</span>
             <ul class="social mb-0 list-inline mt-3">
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
               <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
@@ -116,51 +116,35 @@ filter: FlipH;
         </div>
 
 
-        <div class="card mb-3 text-start shadow-sm" style="margin: auto; max-width: 488px;">
-            <div class="row g-0" style="margin: auto;">
-              <div class="col-3" style="margin: auto;">
-                <img src="{{ asset('pictures/team/merveabla.jpeg') }}" alt="" width="90" class="img-thumbnail">
-              </div>
-              <div class="col-9">
-                <div class="card-body" >
-                  <h5 class="card-title">Special thanks</h5>
-                  <p class="card-text">Special thanks to our English teacher <b>Merve Altınboğa Bayrak</b> </p>
-                </div>
-              </div>
-            </div>
-          </div>
 
 
-        <!-- End-->
+
+
       </div>
 
 
 
       <div class="container px-4 py-5" id="featured-3">
-        <h2 class="pb-2 border-bottom">How to become a plastic detector just like us?</h2>
+        <h2 class="pb-2 border-bottom">{{ __('content.ab12') }}</h2>
         <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
           <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
               <span><b>1</b></span>
             </div>
-            <p><b>If you want to be a plastic detector</b> like one of us, simply
-
-            <a href="{{ route('register') }}" class="link">
-            register
-            </a>
-            our site and start posting the places where you see plastic pollution. </p>
+            <p>
+            {{ __('content.ab13s') }} <b>{{ __('content.ab13b') }}</b> {{ __('content.ab13') }} </p>
           </div>
           <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
                 <span><b>2</b></span>
             </div>
-            <p>When the posts keep increasing in specific zones, as plastic detectors, we will organize <b>clean-up events</b> with the help of non-profit organizations and volunteers. </p>
+            <p>{{ __('content.ab14s') }} <b>{{ __('content.ab14b') }}</b> {{ __('content.ab14') }}</p>
           </div>
           <div class="feature col">
             <div class="feature-icon bg-primary bg-gradient">
                 <span><b>3</b></span>
             </div>
-            <p>As a member of our team, you can join from <b>anywhere in the world</b>; you will be able to receive an <b>e-certificate of your contribution to this community</b>. You will also symbolize the comforts and happiness of contributing to nature and the environment. </p>
+            <p>{{ __('content.ab15s') }} <b>{{ __('content.ab15b') }}</b> {{ __('content.ab15') }}</p>
           </div>
         </div>
       </div>

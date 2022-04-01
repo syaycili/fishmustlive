@@ -57,11 +57,11 @@
                   <h5 class="card-title">{{$title}}</h5>
                   <p class="card-text" style="position: relative;">
                   <p>{{$des}}</p>
-                  <p><b>Address:</b> {{$addres}}</p>
+                  <p><b>{{ __('content.p1') }}: </b> {{$addres}}</p>
                   <br>
                   <br>
                   <div style="position: absolute; right:10px;  float: right; bottom:40px;">
-                        <a href="{{ route('postdetay', ['id' => $id]) }}" style="margin: 15px 20px 20px 15px;" class="btn btn-primary shadow ">Details</a>
+                        <a href="{{ route('postdetay', ['id' => $id]) }}" style="margin: 15px 20px 20px 15px;" class="btn btn-primary shadow ">{{ __('content.p2') }}</a>
                   </div>
                 </div>
               </div>

@@ -40,12 +40,6 @@ body{
 
 <div class="main">
 
-
-
-
-
-
-
     <div class="container col-xxl-8 px-4 py-4">
         <div class="row flex-lg-row align-items-center g-5 py-3">
 
@@ -65,17 +59,6 @@ body{
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
 <style>
 .timeline-steps {
     display: flex;

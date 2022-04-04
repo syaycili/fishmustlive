@@ -5,15 +5,21 @@
 
       <div class="dropdown text-center m-auto mx-auto">
         <button class="btn btn-primary btn-sm dropdown-toggle mt-1 me-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        {{ Config::get('languages')[App::getLocale()] }}
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            @foreach (Config::get('languages') as $lang => $language)
-            @if ($lang != App::getLocale())
-            <li><a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"> {{$language}}</a></li>
+            @if (Config::get('languages')[App::getLocale()] == "Türkçe")
+                <span>&#127481;&#127479;</span>
+            @elseif (Config::get('languages')[App::getLocale()] == "English")
+                <span>&#127482;&#127480;</span>
             @endif
-            @endforeach
-        </ul>
+                {{ Config::get('languages')[App::getLocale()] }}
+
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                @foreach (Config::get('languages') as $lang => $language)
+                @if ($lang != App::getLocale())
+                <li><a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"> {{$language}}</a></li>
+                @endif
+                @endforeach
+            </ul>
       </div>
 
 

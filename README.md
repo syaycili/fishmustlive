@@ -20,8 +20,8 @@ To set up the project locally, follow the steps below:
 1. Clone the repository:
 
    ```shell
-   $ git clone https://github.com/your-username/fishmust-live.git
-   $ cd fishmust-live
+   $ git clone https://github.com/syaycili/fishmustlive.git
+   $ cd fishmustlive
    ```
 
 2. Install dependencies:

@@ -1,10 +1,6 @@
-# Project Name
+# FishMust.Live
 
-fishmust.live
-
-## Project Description
-
-fishmust.live is a social awareness website where users can visualize areas affected by plastic pollution on a map. They can share instances of plastic pollution they encounter, along with their locations, and view plastic pollution shared by other users. The aim of the website is to raise awareness about plastic pollution and encourage users to take action.
+FishMust.Live is a social awareness website where users can visualize areas affected by plastic pollution on a map, share their own observations of plastic pollution with location information, and view plastic pollution shared by other users.
 
 ## Technologies Used
 
@@ -17,61 +13,82 @@ fishmust.live is a social awareness website where users can visualize areas affe
 - Mapbox API
 - MySQL
 
-## Features
-
-- User registration and authentication
-- Interactive map displaying plastic pollution areas
-- Ability to share plastic pollution instances with location information
-- Viewing and browsing plastic pollution instances shared by other users
-- Search functionality to find specific locations or types of plastic pollution
-- User profile management
-
 ## Installation
+
+To set up the project locally, follow the steps below:
 
 1. Clone the repository:
 
-```shell
-git clone https://github.com/your-username/your-repo.git
-```
+   ```shell
+   $ git clone https://github.com/your-username/fishmust-live.git
+   $ cd fishmust-live
+   ```
 
-2. Install the project dependencies:
+2. Install dependencies:
 
-```shell
-composer install
-```
+   ```shell
+   $ composer install
+   $ npm install
+   ```
 
-3. Set up the database configuration in the `.env` file:
+3. Configure the environment variables:
 
-```
-DB_CONNECTION=mysql
-DB_HOST=your-db-host
-DB_PORT=your-db-port
-DB_DATABASE=your-db-name
-DB_USERNAME=your-db-username
-DB_PASSWORD=your-db-password
-```
+   - Create a copy of the `.env.example` file and name it `.env`.
+   - Update the necessary environment variables such as database credentials, AWS configuration, and Mapbox API key in the `.env` file.
 
-4. Run the database migrations:
+4. Generate an application key:
 
-```shell
-php artisan migrate
-```
+   ```shell
+   $ php artisan key:generate
+   ```
 
-5. Start the development server:
+5. Set up the database:
 
-```shell
-php artisan serve
-```
+   - Create a MySQL database for the project.
+   - Update the `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` variables in the `.env` file with your database details.
 
-6. Access the application by visiting `http://localhost:8000` in your web browser.
+   ```shell
+   $ php artisan migrate
+   ```
+
+6. Compile assets:
+
+   ```shell
+   $ npm run dev
+   ```
+
+7. Start the local development server:
+
+   ```shell
+   $ php artisan serve
+   ```
+
+   The website should now be accessible at `http://localhost:8000`.
+
+## Usage
+
+Provide instructions on how to use the website. Include any important features or functionalities.
+
+- Users can sign up or log in to the website.
+- Once logged in, they can view the map showing areas affected by plastic pollution.
+- Users can click on the map to share their observations of plastic pollution, including location information.
+- Users can view plastic pollution shared by other users on the map.
+- Additional features and functionalities...
 
 ## Contributing
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open a new issue or submit a pull request.
+If you want to contribute to this project, follow the steps below:
+
+1. Fork this repository.
+2. Create a new branch: `git checkout -b my-feature`.
+3. Make your changes and commit them: `git commit -m 'Add my feature'`.
+4. Push to the branch: `git push origin my-feature`.
+5. Submit a pull request.
+
+Please make sure to update tests as appropriate and provide a detailed explanation of your changes.
 
 ## License
 
-[MIT License](https://opensource.org/licenses/MIT)
-```
+Specify the license under which your project is distributed. For example:
 
-Please note that this is just a template, and you can modify and enhance it based on your project's specific needs.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
